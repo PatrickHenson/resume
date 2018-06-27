@@ -4,6 +4,9 @@
 % Set the margins on the page to maximize useable space and while appearing symetrical.
 \usepackage[left=2cm, right=2cm, top=2cm]{geometry}
 
+% Include clickable URLs in resume
+\usepackage{hyperref}
+
 \begin{document}
 
 % Remove page numbers from resume.
@@ -15,37 +18,40 @@
 \huge
 \noindent{\bf Full Name}
 \normalsize
+\hfill
+Current Thing ...... Previous Thing .........
 
 % Horizontal rule between the name and the resume body.
 \noindent\hrulefill
 
 % Contact information
 \noindent 
-full.name@email.com
+\href{mailto:fullname@email.com}{fullname@email.com}
 \hfill
-middle
+\href{https://fullname.com}{fullname.com}
 \hfill
-https://website.com
+\href{https://linkedin.com}{LinkedIn}
 
 \noindent
 123-456-7890
+\hfill
+\href{https://github.com}{GitHub}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{TECHNICAL SKILLS}
+\section*{TECHNICAL}
 
-\noindent{\bf Languages}
+\noindent{\bf Languages} \hspace{5.0em}
 Language1, Langauge2, Language3
 
-\noindent{\bf Tools}
+\noindent{\bf Software \& Tools } \hspace{1.0em}
 Tool1, Tool2, Tool3
 
-\noindent{\bf Operating Systems}
+\noindent{\bf Operating Systems} \hspace{0.5em}
 OS1, OS2, OS3
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{EXPERIENCE}
 
-% Work entry.
 \noindent{\bf Company} \hfill Location \\
 \noindent{\sl Position} \hfill Date - Date
 \begin{itemize}
@@ -54,7 +60,6 @@ OS1, OS2, OS3
 \item three.
 \end{itemize}
 
-% Work entry.
 \noindent{\bf Company} \hfill Location \\
 \noindent{\sl Position} \hfill Date - Date
 \begin{itemize}
@@ -65,8 +70,8 @@ OS1, OS2, OS3
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{EDUCATION}
-{\bf University} \hfill Location
 
+{\bf University} \hfill Location \\
 {\sl Degree} \hfill Date
 
 \end{document}
