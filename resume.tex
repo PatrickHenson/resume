@@ -7,12 +7,23 @@
 % Select font package
 \usepackage{helvet}
 
+% Use enumitem list environment to allow for spacing parameters to be applied to entire document.
+\usepackage{enumitem}
+\setlist{nolistsep}
+
 % Set line spacing 
 \linespread{1.0}
 
 % Include clickable URLs in resume
 \usepackage{hyperref}
 
+% Custom commands used to assist with formatting.
+\newcommand{\verticalspace}{\vspace{1.5mm}}
+\newcommand{\horizontalrule}{\noindent\hrulefill}
+\newcommand{\heading}{\noindent\Large\bf} % \section has preset vertical spacing.
+\newcommand{\headingspace}{\vspace{5mm}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
 % Select sans serif (Helvetica) for document.
@@ -29,14 +40,13 @@
 \hfill
 %Clearance: ...... Previously Held: .........
 
-% Horizontal rule between the name and the resume body.
-\noindent\hrulefill
+\horizontalrule
 
 % Contact information
 \noindent 
 \href{mailto:fullname@email.com}{patrick.henson@outlook.com}
 \hfill
-\href{https://patrickhenson.com}{https://patrickhenson.com}
+\href{https://patrickhenson.com}{patrickhenson.com}
 \hfill
 \href{linkedin.com/in/patrickhenson}{LinkedIn}
 \\
@@ -45,44 +55,57 @@
 \href{https://github.com/PatrickHenson}{GitHub}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{TECHNICAL}
+%\section*{TECHNICAL}
+\headingspace
+{\heading TECHNICAL}
 
-\noindent{\bf Languages} \hspace{5.0em}
-C++, C, Java, C\#, Python
+%\horizontalrule
+\verticalspace
 
-\noindent{\bf Software \& Tools } \hspace{1.0em}
-Eclipse, GeoServer, Git, Mercurial, MS SQL, MS Visual Studio, MySQL, nHibernate, Qt,
+% Use table to align technical skills, p{width} allows for word wrap.
+\begin{tabular}{@{} p{.2\linewidth} p{.75\linewidth}}
 
-\hspace{9.0em} Qt Creator, PostgreSQL/PostGIS, Subversion, SQLite, TI CCS
+{\bf Languages} & C++, C, Java, C\#, Python \\
 
-\noindent{\bf Operating Systems} \hspace{0.5em}
-MS Windows, Linux, Mac OS
+{\bf Software \& Tools} & Eclipse, GeoServer, Git, Mercurial, MS SQL, MS Visual Studio, MySQL, nHibernate, Qt, Qt Creator, PostgreSQL/PostGIS, Subversion, SQLite, TI CCS \\
+
+{\bf Operating Systems} & MS Windows, Linux, Mac OS
+
+\end{tabular}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{EXPERIENCE}
+%\section*{EXPERIENCE}
+%\headingspace
+{\heading EXPERIENCE}
 
-\noindent{\bf BAE Systems Inc} \hfill Austin, TX \\
-\noindent{\sl Senior Software Engineer} \hfill Jun 2017 - Present
+%\horizontalrule
+\verticalspace
+
+{\bf BAE Systems Inc} \hfill Austin, TX \\
+\indent{\sl Senior Software Engineer} \hfill Jun 2017 - Present
 \begin{itemize}
-\setlength\itemsep{0em}
-\item Developed the C++
+\item Developed the ALE-47 test software GUI to send simulated input and display hardware feedback for multiple air platforms.  Integrated with the hardware controller using signals \& slots to pass data.
+\item Consulted on a whitepaper, estimating software capabilities, for an electro-optical/infrared (EO/IR) vision system.
 \end{itemize}
 
-\noindent{\bf Thermo Fisher Scientific} \hfill Tewksbury, MA \\
-\noindent{\sl Software Engineer III} \hfill Jun 2014 - May 2017
+\verticalspace
+
+{\bf Thermo Fisher Scientific} \hfill Tewksbury, MA \\
+\indent{\sl Software Engineer III} \hfill Jun 2014 - May 2017
 \begin{itemize}
-\setlength\itemsep{0em}
 \item Provide C++ development support to the Portable Analytical Instruments R\&D group.
-\item Developed the API used to automate device calibration and quality control. Worked with multiple departments to document, modify, and implement the automation process.
+\item Participated on a Practical Process Improvement (PPI) team to identify improvements in the device calibration process.  Worked with science and manufacturing groups to map the existing manual process and create a proposal for an automated calibration and quality control process.
+\item Developed the API used to communicate between the device and the robotic calibration table.  Worked with multiple departments to document, modify, and implement the automation process.
 \item Developed on board software diagnostics to assist Electrical Engineering, Mechanical Engineering, and Manufacturing with hardware testing and triage.
 \item Contribute to ensuring stable hardware operation and power usage during device operation
 \item Coordinated development and testing of NFC interaction between the Portable Test Stand and XL5. 
 \end{itemize}
 
-\noindent{\bf Atmospheric and Environmental Research} \hfill Lexington, MA \\
-\noindent{\sl Scientific Programmer} \hfill Aug 2012 - Jun 2014
+\verticalspace
+
+{\bf Atmospheric and Environmental Research} \hfill Lexington, MA \\
+\indent{\sl Scientific Programmer} \hfill Aug 2012 - Jun 2014
 \begin{itemize}
-\setlength\itemsep{0em}
 \item Provided development support for mission planning and sensor simulation applications using Java and C++.
 \item Contributed to THIN client designed to deliver detection probabilities within a defined AOI.
 \item Developed functionality to authenticate DoD CAC credentials for access to restricted information.
@@ -90,39 +113,46 @@ MS Windows, Linux, Mac OS
 \item Wrote Python scripts to automate PostgreSQL data insertion, generate charts, perform QA, and run tests.
 \end{itemize}
 
-\noindent{\bf Graduate Leverage} \hfill Waltham, MA \\
-\noindent{\sl Software Developer} \hfill Jan 2011 - Aug 2012
+\verticalspace
+
+{\bf Graduate Leverage} \hfill Waltham, MA \\
+\indent{\sl Software Developer} \hfill Jan 2011 - Aug 2012
 \begin{itemize}
-\setlength\itemsep{0em}
-\item Provided development using a mixture of C\#/.NET, JQuery, third party tools, and SQL to build clean, responsive forms.
-\item Developed business logic, user interfaces, and storage solutions using C\#/.NET, nHibernate, and MS SQL Server.
+\item Used C\#/.NET, JQuery, nHibernate, and SQL to develop business logic, user interfaces, and storage solutions.
 \item Implemented tools allowing advisors to modify client loan information and display status and actionable items in the client portal.
 \item Improved the document generation process to allow multiple items to be selected and stored in the client directory. Significantly reduced the time required to deliver forms and information.
 \item Constructed the data layer and services for the rapidly developed Tax Organizer.
 \item Set up reporting tools to allow advisors to locate problem accounts and determine appropriate action.
 \end{itemize}
 
-\noindent{\bf Boston University International Programs Technology Office} \hfill Boston, MA \\
-\noindent{\sl Student Developer} \hfill Jun 2010 - Dec 2010
+\verticalspace
+
+{\bf Boston University International Programs Technology Office} \hfill Boston, MA \\
+\indent{\sl Student Developer} \hfill Jun 2010 - Dec 2010
 \begin{itemize}
-\setlength\itemsep{0em}
-\item Developed an online study abroad evaluation for the International Programs Technology Office (IPTO) to deliver responses from students in 35 international locations.
+\item Built an online study abroad evaluation for the International Programs Technology Office (IPTO) to deliver responses from students in 35 international locations.
 \end{itemize}
 
-\noindent{\bf Boston University College of Fine Arts} \hfill Boston, MA \\
-\noindent{\sl Student Manager/Developer} \hfill Aug 2008 - Dec 2010
+\verticalspace
+
+{\bf Boston University College of Fine Arts} \hfill Boston, MA \\
+\indent{\sl Student Manager/Developer} \hfill Aug 2008 - Dec 2010
 \begin{itemize}
-\setlength\itemsep{0em}
-\item Lead a small development team responsible for delivering PHP/MySQL websites. 
+\item Led a small development team responsible for delivering PHP/MySQL websites. 
 \item Built a departmental equipment reservation site to manage requests, control access, and track hardware.
 \item Created a scheduling system used by multiple departments to track events, recitals, and tryouts with the ability to reserve room locations and use customizable response forms.
 \item Developed an online portfolio submission process for the College of Visual Arts allowing faculty to review candidates, take notes, and make admittance recommendations.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{EDUCATION}
+%\section*{EDUCATION}
+\headingspace
+{\heading EDUCATION}
+
+%\horizontalrule
+\verticalspace
 
 {\bf Boston University} \hfill Boston, MA \\
-{\sl B.S. Computer Engineering} \hfill May 2011
+\indent{\sl B.S. Computer Engineering} \hfill May 2011
 
 \end{document}
