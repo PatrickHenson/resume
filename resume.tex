@@ -21,7 +21,7 @@
 \newcommand{\verticalspace}{\vspace{1.5mm}}
 \newcommand{\horizontalrule}{\noindent\hrulefill}
 \newcommand{\heading}{\noindent\Large\bf} % \section has preset vertical spacing.
-\newcommand{\headingspace}{\vspace{5mm}}
+\newcommand{\headingspace}{\vspace{3.5mm}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -40,6 +40,7 @@
 \hfill
 %Clearance: ...... Previously Held: .........
 
+\vspace{-2mm}
 \horizontalrule
 
 % Contact information
@@ -48,18 +49,16 @@
 \hfill
 \href{https://patrickhenson.com}{patrickhenson.com}
 \hfill
-\href{linkedin.com/in/patrickhenson}{LinkedIn}
+\href{linkedin.com/in/patrickhenson}{LinkedIn.com/in/patrickhenson}
 \\
 \noindent 123-456-7890
 \hfill
-\href{https://github.com/PatrickHenson}{GitHub}
+\href{https://github.com/PatrickHenson}{GitHub.com/patrickhenson}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\section*{TECHNICAL}
 \headingspace
 {\heading TECHNICAL}
 
-%\horizontalrule
 \verticalspace
 
 % Use table to align technical skills, p{width} allows for word wrap.
@@ -67,25 +66,22 @@
 
 {\bf Languages} & C++, C, Java, C\#, Python \\
 
-{\bf Software \& Tools} & Eclipse, GeoServer, Git, Mercurial, MS SQL, MS Visual Studio, MySQL, nHibernate, Qt, Qt Creator, PostgreSQL/PostGIS, Subversion, SQLite, TI CCS \\
+{\bf Software \& Tools} & Eclipse, GeoServer, Git, IAR Embedded Workbench, Mercurial, MS SQL, MySQL, Qt, PostgreSQL/PostGIS, Subversion, SQLite, TI CCS, Vim, Visual Studio, VMWare \\
 
-{\bf Operating Systems} & MS Windows, Linux, Mac OS
+{\bf Operating Systems} & Linux, Mac OS X, Microsoft Windows
 
 \end{tabular}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\section*{EXPERIENCE}
-%\headingspace
 {\heading EXPERIENCE}
 
-%\horizontalrule
 \verticalspace
 
 {\bf BAE Systems Inc} \hfill Austin, TX \\
 \indent{\sl Senior Software Engineer} \hfill Jun 2017 - Present
 \begin{itemize}
-\item Developed the ALE-47 test software GUI to send simulated input and display hardware feedback for multiple air platforms.  Integrated with the hardware controller using signals \& slots to pass data.
-\item Consulted on a whitepaper, estimating software capabilities, for an electro-optical/infrared (EO/IR) vision system.
+\item Developed the C++/Qt ALE-47 test software GUI to send simulated input and display hardware feedback for multiple platform configurations.  Integrated with the simultaneously developed hardware control software.
+\item Consulted on a whitepaper for an electro-optical/infrared (EO/IR) vision system.
 \end{itemize}
 
 \verticalspace
@@ -93,12 +89,13 @@
 {\bf Thermo Fisher Scientific} \hfill Tewksbury, MA \\
 \indent{\sl Software Engineer III} \hfill Jun 2014 - May 2017
 \begin{itemize}
-\item Provide C++ development support to the Portable Analytical Instruments R\&D group.
-\item Participated on a Practical Process Improvement (PPI) team to identify improvements in the device calibration process.  Worked with science and manufacturing groups to map the existing manual process and create a proposal for an automated calibration and quality control process.
-\item Developed the API used to communicate between the device and the robotic calibration table.  Worked with multiple departments to document, modify, and implement the automation process.
-\item Developed on board software diagnostics to assist Electrical Engineering, Mechanical Engineering, and Manufacturing with hardware testing and triage.
-\item Contribute to ensuring stable hardware operation and power usage during device operation
-\item Coordinated development and testing of NFC interaction between the Portable Test Stand and XL5. 
+\item Provided C++ development support to the Portable Analytical Instruments R\&D group.
+
+\item Worked with multiple departments to document, identify improvements, and generate a proposal for an automated device calibration and quality control process.
+\item Developed the API used to communicate between devices and robotic calibration tables.
+\item Developed onboard device diagnostics to assist with environmental testing, hardware testing, and triage.
+\item Contributed to ensuring stable hardware operation and power usage during sustained operation.
+\item Coordinated development and testing of RFID communication on the XL5 and Portable Test Stand. 
 \end{itemize}
 
 \verticalspace
@@ -106,9 +103,9 @@
 {\bf Atmospheric and Environmental Research} \hfill Lexington, MA \\
 \indent{\sl Scientific Programmer} \hfill Aug 2012 - Jun 2014
 \begin{itemize}
-\item Provided development support for mission planning and sensor simulation applications using Java and C++.
+\item Developed mission planning and sensor simulation applications using C++, Java, and Python.
 \item Contributed to THIN client designed to deliver detection probabilities within a defined AOI.
-\item Developed functionality to authenticate DoD CAC credentials for access to restricted information.
+\item Added functionality to authenticate DoD CAC credentials for access to restricted information.
 \item Set up and maintained CentOS GeoServer installation to manage GIS data using REST and OGC services.
 \item Wrote Python scripts to automate PostgreSQL data insertion, generate charts, perform QA, and run tests.
 \end{itemize}
@@ -118,38 +115,34 @@
 {\bf Graduate Leverage} \hfill Waltham, MA \\
 \indent{\sl Software Developer} \hfill Jan 2011 - Aug 2012
 \begin{itemize}
-\item Used C\#/.NET, JQuery, nHibernate, and SQL to develop business logic, user interfaces, and storage solutions.
-\item Implemented tools allowing advisors to modify client loan information and display status and actionable items in the client portal.
-\item Improved the document generation process to allow multiple items to be selected and stored in the client directory. Significantly reduced the time required to deliver forms and information.
+\item Used C\#, JQuery, nHibernate, and SQL to develop business logic, user interfaces, and storage solutions.
+\item Implemented tools to modify loan information, status, and action items displayed in the client portal.
+\item Improved the document generation process and significantly reduced the time required to deliver forms.
 \item Constructed the data layer and services for the rapidly developed Tax Organizer.
 \item Set up reporting tools to allow advisors to locate problem accounts and determine appropriate action.
 \end{itemize}
 
 \verticalspace
 
-{\bf Boston University International Programs Technology Office} \hfill Boston, MA \\
-\indent{\sl Student Developer} \hfill Jun 2010 - Dec 2010
+{\bf Boston University} \hfill Boston, MA \\
+\indent{\sl Student Developer - International Programs Technology Office} \hfill Jun 2010 - Dec 2010
 \begin{itemize}
-\item Built an online study abroad evaluation for the International Programs Technology Office (IPTO) to deliver responses from students in 35 international locations.
+\item Built a PHP/MySQL study abroad evaluation to deliver responses from students in 35 international locations.
 \end{itemize}
 
-\verticalspace
-
-{\bf Boston University College of Fine Arts} \hfill Boston, MA \\
-\indent{\sl Student Manager/Developer} \hfill Aug 2008 - Dec 2010
+\indent{\sl Student Manager/Developer - College of Fine Arts} \hfill Aug 2008 - Dec 2010
 \begin{itemize}
-\item Led a small development team responsible for delivering PHP/MySQL websites. 
-\item Built a departmental equipment reservation site to manage requests, control access, and track hardware.
-\item Created a scheduling system used by multiple departments to track events, recitals, and tryouts with the ability to reserve room locations and use customizable response forms.
-\item Developed an online portfolio submission process for the College of Visual Arts allowing faculty to review candidates, take notes, and make admittance recommendations.
+\item Led a student development team responsible for delivering several PHP/MySQL websites. 
+\item Built a staff dashboard, an equipment reservation site, a room scheduling system, and an online portfolio submission process.
+%\item Built a departmental equipment reservation site to manage requests, control access, and track hardware.
+%\item Created a scheduling system used by multiple departments to track events, recitals, and tryouts with the ability to reserve room locations and use customizable response forms.
+%\item Developed an online portfolio submission process for the College of Visual Arts allowing faculty to review candidates, take notes, and make admittance recommendations.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\section*{EDUCATION}
 \headingspace
 {\heading EDUCATION}
 
-%\horizontalrule
 \verticalspace
 
 {\bf Boston University} \hfill Boston, MA \\
