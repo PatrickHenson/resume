@@ -1,0 +1,81 @@
+% LaTeX resume template using built using standard packages.
+\documentclass[10pt]{article}
+
+% Set the margins on the page to maximize useable space and while appearing symetrical.
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+
+% Select font package
+\usepackage{helvet}
+
+% Use enumitem list environment to allow for spacing parameters to be applied to entire document.
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+% Set line spacing 
+\linespread{1.0}
+
+% Include clickable URLs in resume
+\usepackage{hyperref}
+
+% Custom commands used to assist with formatting.
+\newcommand{\verticalspace}{\vspace{2.0mm}}
+\newcommand{\horizontalrule}{\noindent\hrulefill}
+\newcommand{\heading}{\noindent\Large\bf} % \section has preset vertical spacing.
+\newcommand{\headingspace}{\vspace{3.5mm}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% Select sans serif (Helvetica) for document.
+\renewcommand\familydefault{\sfdefault}
+
+% Remove page numbers from resume.
+\pagenumbering{gobble}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Import personal information used to populate the header.
+\input{personal_info.tex}
+
+% Use predifined font sizes (huge, large, normalsize, etc) 
+\noindent{\huge\bf \fullname}
+\hfill
+% additional info above horizontal rule
+
+\vspace{-2mm}
+\horizontalrule
+
+% Contact information
+\noindent 
+\href{mailto:\email}{\email}
+\hfill
+\href{https://\website}{\website}
+\hfill
+\href{https://\linkedin}{\linkedin}
+\\
+\noindent \phonenumber
+\hfill
+\href{https://\github}{\github}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\headingspace
+
+\noindent Hello,
+
+\verticalspace
+
+Express interest in specific position/title/ and how skills fit.
+
+
+Summary of relevant skills and experience.
+
+
+Thank you for consideration and express interest in further communication.
+
+\verticalspace
+
+\noindent Sincerely, \\
+\fullname
+
+\end{document}
