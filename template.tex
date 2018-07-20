@@ -1,15 +1,29 @@
 % LaTeX resume template using built using standard packages.
-\documentclass{article}
+\documentclass[10pt]{article}
 
 % Set the margins on the page to maximize useable space and while appearing symetrical.
-\usepackage[left=2cm, right=2cm, top=2cm]{geometry}
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
 
 % Select font package
 \usepackage{helvet}
 
+% Use enumitem list environment to allow for spacing parameters to be applied to entire document.
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+% Set line spacing 
+\linespread{1.0}
+
 % Include clickable URLs in resume
 \usepackage{hyperref}
 
+% Custom commands used to assist with formatting.
+\newcommand{\verticalspace}{\vspace{2.0mm}}
+\newcommand{\horizontalrule}{\noindent\hrulefill}
+\newcommand{\heading}{\noindent\Large\bf} % \section has preset vertical spacing.
+\newcommand{\headingspace}{\vspace{3.5mm}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
 % Select sans serif (Helvetica) for document.
@@ -19,65 +33,94 @@
 \pagenumbering{gobble}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\fullname}{Full Name}
+\newcommand{\email}{fullname@email.com}
+\newcommand{\phonenumber}{123-456-7890}
+\newcommand{\website}{fullname.com}
+\newcommand{\linkedin}{linkedin.com/in/fullname}
+\newcommand{\github}{github.com/fullname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Resume header containing name and contact information.
 % Use predifined font sizes (huge, large, normalsize, etc) 
-\huge
-\noindent{\bf Full Name}
-\normalsize
+\noindent{\huge\bf \fullname}
 \hfill
-Current Thing ...... Previous Thing .........
+% additional info above horizontal rule
 
-% Horizontal rule between the name and the resume body.
-\noindent\hrulefill
+\vspace{-2mm}
+\horizontalrule
 
 % Contact information
 \noindent 
-\href{mailto:fullname@email.com}{fullname@email.com}
+\href{mailto:\email}{\email}
 \hfill
-\href{https://fullname.com}{fullname.com}
+\href{https://\website}{\website}
 \hfill
-\href{https://linkedin.com}{LinkedIn}
-
-\noindent
-123-456-7890
+\href{https://\linkedin}{\linkedin}
+\\
+\noindent \phonenumber
 \hfill
-\href{https://github.com}{GitHub}
+\href{https://\github}{\github}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{TECHNICAL}
+\headingspace
+{\heading TECHNICAL}
 
-\noindent{\bf Languages} \hspace{5.0em}
-Language1, Langauge2, Language3
+\verticalspace
 
-\noindent{\bf Software \& Tools } \hspace{1.0em}
-Tool1, Tool2, Tool3
+% Use table to align technical skills, p{width} allows for word wrap.
+\begin{tabular}{@{} p{.2\linewidth} p{.75\linewidth}}
 
-\noindent{\bf Operating Systems} \hspace{0.5em}
-OS1, OS2, OS3
+{\bf Languages} & Language1, Language2, Language3 \\
+
+{\bf Software \& Tools} & Tool1, Tool2, Tool3 \\
+
+{\bf Operating Systems} & Linux, Mac OS X, Microsoft Windows
+
+\end{tabular}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{EXPERIENCE}
+{\heading EXPERIENCE}
 
-\noindent{\bf Company} \hfill Location \\
-\noindent{\sl Position} \hfill Date - Date
+\verticalspace
+
+{\bf Company} \hfill Location \\
+\indent{\sl Position} \hfill Start - End
 \begin{itemize}
-\item one.
-\item two.
-\item three.
+\item 
+\item 
+\item
 \end{itemize}
 
-\noindent{\bf Company} \hfill Location \\
-\noindent{\sl Position} \hfill Date - Date
+\verticalspace
+
+\verticalspace
+
+{\bf Company} \hfill Location \\
+\indent{\sl Position} \hfill Start - End
 \begin{itemize}
-\item one.
-\item two.
-\item three.
+\item 
+\item 
+\item
+\end{itemize}
+
+\verticalspace
+
+{\bf Company} \hfill Location \\
+\indent{\sl Position} \hfill Start - End
+\begin{itemize}
+\item 
+\item 
+\item
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{EDUCATION}
+\headingspace
+{\heading EDUCATION}
+
+\verticalspace
 
 {\bf University} \hfill Location \\
-{\sl Degree} \hfill Date
+\indent{\sl Degree} \hfill Date
 
 \end{document}
