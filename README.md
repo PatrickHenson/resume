@@ -10,3 +10,14 @@ On top of having an easily accessible resume, this will give me a chance to play
 ## License
 
 This project is currently unlicensed as it exists to track the history of my resume.  Do you license a resume?
+
+The following files are released under the [Apache 2.0 License](https://opensource.org/licenses/Apache-2.0)
+* cover_letter_template.tex
+* personal_info.tex
+* resume_template.tex
+
+All content generated outside of the listed template files is to remain under the original author's ownership.
+
+## Usage
+
+The resume_template.tex and cover_letter_template.tex files contain all of the formatting necessary to begin populate your own documents. The templates import personal_info.tex to populate the header information, allowing for consistency and simple updates.
