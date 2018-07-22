@@ -34,26 +34,28 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Resume header containing name and contact information.
+% Import personal contact information used to populate the header.
+\input{personal_info.tex}
+
 % Use predifined font sizes (huge, large, normalsize, etc) 
-\noindent{\huge\bf Patrick Henson}
+\noindent{\huge\bf \fullname}
 \hfill
-%Clearance: ...... Previously Held: .........
+% additional info above horizontal rule
 
 \vspace{-2mm}
 \horizontalrule
 
 % Contact information
 \noindent 
-\href{mailto:fullname@email.com}{patrick.henson@outlook.com}
+\href{mailto:\email}{\email}
 \hfill
-\href{https://patrickhenson.com}{patrickhenson.com}
+\href{https://\website}{\website}
 \hfill
-\href{linkedin.com/in/patrickhenson}{LinkedIn.com/in/patrickhenson}
+\href{https://\linkedin}{\linkedin}
 \\
-\noindent 123-456-7890
+\noindent \phonenumber
 \hfill
-\href{https://github.com/PatrickHenson}{GitHub.com/patrickhenson}
+\href{https://\github}{\github}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headingspace
@@ -91,10 +93,10 @@
 \begin{itemize}
 \item Provided C++ development support to the Portable Analytical Instruments R\&D group.
 
-\item Worked with multiple departments to document, identify improvements, and generate a proposal for an automated device calibration and quality control process.
+\item Worked with multiple departments to flow map, document, identify improvements, and generate a proposal for an automated device calibration and quality control process.
 \item Developed the API used for communication between devices and the robotic calibration tables.  Assisted with factory implementation, trial runs, and automated report generation.
 \item Developed onboard device diagnostics to assist with environmental testing, hardware testing, and triage.
-\item Contributed to ensuring stable hardware operation and power usage during sustained operation.
+\item Contributed to ensuring stable hardware performance and power usage during sustained operation.
 \item Coordinated with EE to develop, test, and certify RFID communication on the XL5 and Portable Test Stand. 
 \end{itemize}
 
@@ -104,7 +106,7 @@
 \indent{\sl Scientific Programmer} \hfill Aug 2012 - Jun 2014
 \begin{itemize}
 \item Developed mission planning and sensor simulation applications using C++, Java, and Python.
-\item Contributed to THIN client designed to deliver detection probabilities within a defined AOI.
+\item Contributed to thin client designed to deliver detection probabilities within a defined AOI.
 \item Added functionality to authenticate DoD CAC credentials for access to restricted information.
 \item Set up and maintained CentOS GeoServer installation to manage GIS data using REST and OGC services.
 \item Wrote Python scripts to automate PostgreSQL data insertion, generate charts, perform QA, and run tests.
