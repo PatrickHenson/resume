@@ -9,7 +9,7 @@ On top of having an easily accessible resume, this will give me a chance to play
 
 ## License
 
-This project is currently unlicensed as it exists to track the history of my resume.  Do you license a resume?
+Do you license a resume?
 
 The following files are released under the [Apache 2.0 License](https://opensource.org/licenses/Apache-2.0)
 * cover_letter_template.tex
